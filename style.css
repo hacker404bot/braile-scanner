@@ -1,43 +1,132 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #dce35b, #45b649);
     padding: 20px;
     text-align: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
   }
   
   .container {
     max-width: 700px;
     margin: auto;
-    padding: 20px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    animation: fadeIn 1s ease;
   }
   
   h1 {
     margin-bottom: 20px;
+    color: #333;
+    font-size: 28px;
+    animation: slideInTop 1s ease;
   }
   
   video {
     width: 100%;
     max-width: 640px;
-    height: auto;
-    border-radius: 12px;
-    border: 2px solid #ccc;
+    border-radius: 15px;
+    border: 3px solid #ccc;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  video:hover {
+    transform: scale(1.02);
+  }
+  
+  .controls {
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 14px 24px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(45deg, #007bff, #00c6ff);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background 0.4s, transform 0.2s;
+  }
+  
+  button:hover {
+    background: linear-gradient(45deg, #0056b3, #0096c7);
+    transform: scale(1.05);
   }
   
   .output {
-    margin-top: 20px;
     text-align: left;
+    margin-top: 30px;
+    animation: fadeInText 1s ease;
+  }
+  
+  .output h3 {
+    color: #555;
+    margin-top: 20px;
   }
   
   .output p {
-    background: #eaeaea;
-    padding: 10px;
-    border-radius: 6px;
+    background: #eee;
+    padding: 15px;
+    border-radius: 10px;
     white-space: pre-wrap;
-    word-wrap: break-word;
-    font-size: 16px;
+    font-size: 18px;
+    color: #222;
+    animation: fadeInText 1s ease;
+  }
+  
+  /* Copy button styles */
+  .text-container {
+    position: relative;
+  }
+  
+  .copyBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 6px 12px;
+    font-size: 14px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .copyBtn:hover {
+    background: #218838;
+  }
+  
+  .copy-message {
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    font-size: 12px;
+    color: green;
+    visibility: hidden;
+  }
+  
+  /* Animations */
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.9);}
+    100% { opacity: 1; transform: scale(1);}
+  }
+  
+  @keyframes fadeInText {
+    0% { opacity: 0; transform: translateY(20px);}
+    100% { opacity: 1; transform: translateY(0);}
+  }
+  
+  @keyframes slideInTop {
+    0% { opacity: 0; transform: translateY(-50px);}
+    100% { opacity: 1; transform: translateY(0);}
   }
   
