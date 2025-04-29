@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  video {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+  }
+  
+  .output {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .output p {
+    background: #eaeaea;
+    padding: 10px;
+    border-radius: 6px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 16px;
+  }
+  
