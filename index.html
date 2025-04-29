@@ -2,21 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Real-Time Braille Scanner</title>
+  <title>Capture to Braille and Voice</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <h1>📷 Real-Time Braille Scanner & Voice</h1>
+    <h1>📷 Image to Braille + Voice</h1>
+
     <video id="video" autoplay playsinline></video>
     <canvas id="canvas" width="320" height="240" style="display:none;"></canvas>
 
+    <div class="controls">
+      <button id="captureBtn">📸 Capture</button>
+      <button id="speakBtn">🎤 Speak</button>
+    </div>
+
     <div class="output">
       <h3>Extracted Text:</h3>
-      <p id="textOutput"></p>
+      <div class="text-container">
+        <p id="textOutput">--</p>
+        <button class="copyBtn" onclick="copyText('textOutput')">📋 Copy</button>
+        <span id="copyTextMessage" class="copy-message"></span>
+      </div>
 
       <h3>Braille Output:</h3>
-      <p id="brailleOutput"></p>
+      <div class="text-container">
+        <p id="brailleOutput">--</p>
+        <button class="copyBtn" onclick="copyText('brailleOutput')">📋 Copy</button>
+        <span id="copyBrailleMessage" class="copy-message"></span>
+      </div>
     </div>
   </div>
 
